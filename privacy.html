@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gizlilik Politikası — DiaLogic T-One</title>
+<style>
+  body { font-family: -apple-system, system-ui, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 28px 20px 64px; color: #1a1d23; line-height: 1.6; }
+  h1 { color: #0d9373; border-bottom: 2px solid #0d9373; padding-bottom: 8px; }
+  h2 { color: #0d9373; margin-top: 28px; font-size: 19px; }
+  h3 { font-size: 15px; margin-top: 18px; }
+  .tldr { background: #f0faf6; border: 1px solid #0d9373; border-radius: 10px; padding: 14px 18px; margin: 18px 0; }
+  .muted { color: #666; font-size: 13px; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f0faf6; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 40px 0; }
+  .backbar { position: sticky; top: 0; z-index: 10; background: #fff; padding: 10px 0 12px; margin: -28px 0 6px; border-bottom: 1px solid #eee; }
+  .backbtn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; background: #0d9373; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; text-decoration: none; }
+  .backbtn:active { opacity: .85; }
+</style>
+</head>
+<body>
+
+<div class="backbar"><button type="button" class="backbtn" id="backBtn">← Geri</button></div>
+
+<h1>Gizlilik Politikası — DiaLogic T-One</h1>
+<p class="muted">Yürürlük tarihi: <strong>16.06.2026</strong> · Sürüm 1.0</p>
+
+<div class="tldr">
+<strong>Özet:</strong> DiaLogic T-One sağlık verilerinizi (insülin dozları, kan şekeri ölçümleri, profil, yemek kayıtları) <strong>yalnızca kendi cihazınızda</strong> saklar. Bu verileri sunucularımıza göndermeyiz, görmeyiz, depolamayız. Hesap açmanız gerekmez. Yalnızca üç isteğe bağlı özellik (hava durumu, internet besin araması, AI öğün analizi) sınırlı veriyi üçüncü taraf servislere gönderir — aşağıda tek tek açıklanmıştır.
+</div>
+
+<h2>1. Kimiz?</h2>
+<p>DiaLogic T-One, Tip 1 diyabet hastaları için <strong>eğitim ve karar destek amaçlı</strong> bir bolus insülin hesaplama uygulamasıdır. Bu politika, uygulamayı kullanırken verilerinizin nasıl işlendiğini açıklar.</p>
+<p><strong>Veri sorumlusu:</strong> Cüneyt Arabul · <strong>İletişim:</strong> cuneyt.arabul@gmail.com</p>
+
+<h2>2. Hangi verileri işliyoruz ve nerede saklanıyor?</h2>
+<p>Uygulamaya girdiğiniz tüm sağlık ve profil verileri <strong>yalnızca cihazınızın yerel depolamasında</strong> (<code>localStorage</code>) tutulur. Bu veriler cihazınızdan ayrılmaz; bizim ya da üçüncü bir tarafın sunucusuna <strong>gönderilmez</strong>.</p>
+<table>
+<tr><th>Veri türü</th><th>Örnek</th><th>Saklandığı yer</th></tr>
+<tr><td>Profil</td><td>Ad (opsiyonel), yaş, tanı yılı, kilo, TGD, İKO/İDF, hedef KŞ</td><td>Yalnızca cihaz</td></tr>
+<tr><td>İnsülin kayıtları</td><td>Bolus / düzeltme / bazal dozları, saat, not</td><td>Yalnızca cihaz</td></tr>
+<tr><td>Kan şekeri günlüğü</td><td>KŞ ölçümleri, öğün etiketi, zaman</td><td>Yalnızca cihaz</td></tr>
+<tr><td>Yemek/öğün</td><td>Favori besinler, öğün şablonları</td><td>Yalnızca cihaz</td></tr>
+<tr><td>Tercihler</td><td>Dil, birim (mg/dL / mmol/L), tema, bildirim saatleri</td><td>Yalnızca cihaz</td></tr>
+</table>
+<p><strong>Hesap yok:</strong> Uygulama kayıt/giriş gerektirmez. Adınızı, e-postanızı veya kimlik bilgilerinizi toplamayız.</p>
+
+<h2>3. Üçüncü taraf servisler (yalnızca ilgili özelliği kullanırsanız)</h2>
+<p>Aşağıdaki üç özellik isteğe bağlıdır ve yalnızca siz kullandığınızda <strong>sınırlı</strong> veri ilgili servise gider. Bu servislere kimlik bilginiz, kayıtlarınız veya sağlık geçmişiniz <strong>gönderilmez</strong>.</p>
+<table>
+<tr><th>Özellik</th><th>Servis</th><th>Gönderilen</th><th>Amaç</th></tr>
+<tr><td>Hava durumu uyarısı</td><td>Open-Meteo</td><td>Yaklaşık konum (enlem/boylam)</td><td>Bulunduğunuz yerin sıcaklığını alıp insülin saklama uyarısı vermek. Konum kaydedilmez.</td></tr>
+<tr><td>İnternet besin araması (🌐)</td><td>Open Food Facts, USDA FoodData Central</td><td>Yalnızca aradığınız ürün/besin adı</td><td>Besin değerlerini getirmek.</td></tr>
+<tr><td>AI öğün analizi (🤖)</td><td>Google Gemini API (Cloudflare Worker proxy üzerinden)</td><td>Yalnızca yazdığınız öğün metni veya çektiğiniz yemek fotoğrafı</td><td>Öğünü karbonhidrat/yağ/proteine ayrıştırmak. Kimlik bilgisi gönderilmez.</td></tr>
+</table>
+<p class="muted">Bu servislerin kendi gizlilik politikaları geçerlidir: Open-Meteo, Open Food Facts, USDA ve Google (Gemini). AI özelliğini kullandığınızda öğün metni/fotoğrafı işlenmek üzere Google'a iletilir.</p>
+
+<h2>4. Konum</h2>
+<p>Konum yalnızca <strong>siz hava durumu özelliğini kullandığınızda</strong> ve cihazınız izin verdiğinde alınır. Yalnızca sıcaklık verisi için kullanılır, hiçbir yere kaydedilmez ve geçmişi tutulmaz.</p>
+
+<h2>5. Çocukların gizliliği</h2>
+<p>Tip 1 diyabet çocukları da etkiler. Bu uygulama bir <strong>yetişkin (ebeveyn/bakıcı veya hasta) gözetiminde</strong> kullanılmak üzere tasarlanmıştır. Reşit olmayan kullanıcılar uygulamayı ancak ebeveyn/yasal vasi onayı ve gözetimiyle kullanmalıdır. Çocuklardan bilerek kimlik verisi toplamayız (zaten hiç kimlik verisi toplamıyoruz).</p>
+
+<h2>6. Veri saklama, yedekleme ve silme</h2>
+<ul>
+<li><strong>Saklama:</strong> Verileriniz siz silene kadar cihazınızda kalır. Bizde bir kopyası bulunmaz.</li>
+<li><strong>Yedekleme:</strong> İsteğe bağlı yedekleme, verilerinizi <strong>sizin seçtiğiniz</strong> yere (Google Drive, iCloud, e-posta vb.) bir dosya olarak gönderir. Bu dosyaya biz erişemeyiz.</li>
+<li><strong>Silme:</strong> Profil → "Her Şeyi Sil" ile tüm verilerinizi kalıcı olarak silebilirsiniz. Uygulamayı kaldırmak veya uygulama verilerini temizlemek de verileri siler.</li>
+<li><strong>Kayıp riski:</strong> Veriler yalnızca cihazda olduğundan, cihaz kaybolur/sıfırlanırsa ve yedeğiniz yoksa veriler geri alınamaz.</li>
+</ul>
+
+<h2>7. Güvenlik</h2>
+<p>Sağlık verileriniz cihazınızdan çıkmadığı için sunucu sızıntısı riski yoktur. Cihazınızın kendi güvenliğini (ekran kilidi, şifreleme) sağlamanızı öneririz.</p>
+
+<h2>8. Haklarınız (KVKK / GDPR)</h2>
+<p>Verileriniz cihazınızda olduğundan erişim, düzeltme ve silme hakkınızı doğrudan uygulama içinden kullanırsınız. Bizde kişisel veriniz tutulmadığı için bize yönelteceğiniz bir erişim/silme talebi söz konusu değildir. Yine de sorularınız için bize ulaşabilirsiniz.</p>
+
+<h2>9. Değişiklikler</h2>
+<p>Bu politikayı güncelleyebiliriz. Önemli değişikliklerde uygulama içinde veya bu sayfada bilgilendirme yaparız. Güncel sürüm her zaman bu adreste yayınlanır.</p>
+
+<h2>10. İletişim</h2>
+<p>Sorularınız için: <strong>cuneyt.arabul@gmail.com</strong></p>
+
+<hr />
+
+<h1>Privacy Policy — DiaLogic T-One (English)</h1>
+<p class="muted">Effective date: <strong>16.06.2026</strong> · Version 1.0</p>
+
+<div class="tldr">
+<strong>Summary:</strong> DiaLogic T-One stores your health data (insulin doses, blood glucose readings, profile, food logs) <strong>only on your own device</strong>. We never send this data to our servers, never see it, never store it. No account is required. Only three optional features (weather, online food search, AI meal analysis) send limited data to third-party services — each is described below.
+</div>
+
+<h2>1. Who we are</h2>
+<p>DiaLogic T-One is an <strong>educational and decision-support</strong> bolus insulin calculation app for people with Type 1 diabetes. <strong>Data controller:</strong> Cüneyt Arabul · <strong>Contact:</strong> cuneyt.arabul@gmail.com</p>
+
+<h2>2. What data we process and where it is stored</h2>
+<p>All health and profile data you enter is kept <strong>only in your device's local storage</strong> and is <strong>never transmitted</strong> to our or any third party's servers. This includes profile (name optional, age, weight, TDD, ICR/ISF, target BG), insulin records, blood-glucose log, favorite foods/meal templates, and preferences. <strong>No account, login, or identity data is collected.</strong></p>
+
+<h2>3. Third-party services (only if you use the related feature)</h2>
+<table>
+<tr><th>Feature</th><th>Service</th><th>Sent</th><th>Purpose</th></tr>
+<tr><td>Weather warning</td><td>Open-Meteo</td><td>Approximate location (lat/lon)</td><td>Get local temperature for insulin-storage warnings. Location is not stored.</td></tr>
+<tr><td>Online food search (🌐)</td><td>Open Food Facts, USDA</td><td>Only the product/food name you search</td><td>Retrieve nutrition values.</td></tr>
+<tr><td>AI meal analysis (🤖)</td><td>Google Gemini API (via Cloudflare Worker proxy)</td><td>Only the meal text or photo you provide</td><td>Parse the meal into carbs/fat/protein. No identity data is sent.</td></tr>
+</table>
+<p class="muted">Each service's own privacy policy applies (Open-Meteo, Open Food Facts, USDA, and Google for Gemini).</p>
+
+<h2>4. Children's privacy</h2>
+<p>Type 1 diabetes also affects children. This app is intended for use under <strong>adult (parent/guardian or patient) supervision</strong>. Minors should use it only with parental/guardian consent and supervision. We do not knowingly collect identity data from children (we collect no identity data at all).</p>
+
+<h2>5. Retention, backup and deletion</h2>
+<p>Your data stays on your device until you delete it. Optional backup sends your data as a file to <strong>a location you choose</strong> (Drive, iCloud, email…), which we cannot access. Use Profile → "Delete Everything" to permanently erase all data; uninstalling or clearing app data also deletes it. Because data lives only on the device, loss of the device without a backup means the data cannot be recovered.</p>
+
+<h2>6. Your rights (GDPR/KVKK)</h2>
+<p>Because your data resides on your device, you exercise access, correction, and deletion directly within the app. We hold no personal data about you. You may still contact us with questions.</p>
+
+<h2>7. Changes & contact</h2>
+<p>We may update this policy; significant changes will be noted in-app or on this page. Contact: <strong>cuneyt.arabul@gmail.com</strong></p>
+
+<hr />
+<p class="muted"><em>Bu belge bir taslaktır ve yayından önce bir hukuk danışmanınca gözden geçirilmelidir. / This document is a draft and should be reviewed by legal counsel before publication.</em></p>
+
+<script>
+  // Geri/kapat: aynı webview'da geçmiş varsa geri dön, yoksa (yeni sekme/pencere) kapat.
+  document.getElementById("backBtn").addEventListener("click", function () {
+    if (history.length > 1) history.back();
+    else window.close();
+  });
+</script>
+</body>
+</html>
