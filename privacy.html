@@ -26,7 +26,7 @@
 <div class="backbar"><button type="button" class="backbtn" id="backBtn">← Geri</button></div>
 
 <h1>Gizlilik Politikası — DiaLogic</h1>
-<p class="muted">Yürürlük tarihi: <strong>22.09.2026</strong> · Sürüm 2.1</p>
+<p class="muted">Yürürlük tarihi: <strong>23.09.2026</strong> · Sürüm 2.2</p>
 
 <div class="tldr">
 <strong>Özet:</strong> DiaLogic kayıtlarınızı (öğün günlüğü, favoriler, hedefler, profil) <strong>yalnızca kendi cihazınızda</strong> saklar. Bu verileri sunucularımıza göndermeyiz, görmeyiz, depolamayız. Hesap açmanız gerekmez. Yalnızca isteğe bağlı çevrimiçi özellikler (internet besin araması, barkod sorgusu, AI öğün analizi) sınırlı veriyi ilgili servise gönderir; ayrıca abonelik durumunu doğrulamak için açılışta Google Play ve RevenueCat ile satın alma/cihaz bilgisi işlenir — hepsi aşağıda tek tek açıklanmıştır. <strong>Konum izni istemiyoruz; reklam ağı ve izleyici (tracker) kullanmıyoruz.</strong>
@@ -53,8 +53,8 @@
   <tr><th>Özellik</th><th>Giden veri</th><th>Alıcı</th><th>Saklanıyor mu?</th></tr>
   <tr><td>İnternet besin araması</td><td>Yazdığınız arama metni (ör. "yulaf")</td><td>USDA FoodData Central (Cloudflare Worker proxy üzerinden) · Open Food Facts</td><td>Tarafımızca saklanmaz</td></tr>
   <tr><td>Barkod ile ürün ekleme</td><td>Yalnızca barkod numarası</td><td>Open Food Facts</td><td>Tarafımızca saklanmaz</td></tr>
-  <tr><td>AI öğün analizi (metin)</td><td>Yazdığınız öğün metni</td><td>Cloudflare Worker → Google Gemini</td><td>Anlık işlenir, saklanmaz</td></tr>
-  <tr><td>AI öğün analizi (fotoğraf)</td><td>Seçtiğiniz/çektiğiniz yemek fotoğrafı (küçültülmüş)</td><td>Cloudflare Worker → Google Gemini</td><td>Anlık işlenir, saklanmaz</td></tr>
+  <tr><td>AI öğün analizi (metin)</td><td>Yazdığınız öğün metni</td><td>Cloudflare Worker → Google Gemini</td><td>Sunucumuzda saklanmaz. Google, kötüye kullanımı önlemek için 55 gün tutar; ürünlerini geliştirmek için kullanmaz.</td></tr>
+  <tr><td>AI öğün analizi (fotoğraf)</td><td>Seçtiğiniz/çektiğiniz yemek fotoğrafı (küçültülmüş)</td><td>Cloudflare Worker → Google Gemini</td><td>Sunucumuzda saklanmaz. Google, kötüye kullanımı önlemek için 55 gün tutar; ürünlerini geliştirmek için kullanmaz.</td></tr>
 </table>
 <p>Barkod okuma <strong>cihazınızda</strong> yapılır: fotoğraf çözümlemesi tamamen uygulama içinde gerçekleşir, yalnızca çözülen numara sorgulanır. Uygulama <strong>kamera izni istemez</strong>; fotoğraf, sisteminizin kendi kamera/galeri seçicisiyle alınır.</p>
 
@@ -95,7 +95,7 @@
 <section lang="en">
 
 <h1>Privacy Policy — DiaLogic (English)</h1>
-<p class="muted">Effective date: <strong>22 September 2026</strong> · Version 2.1</p>
+<p class="muted">Effective date: <strong>23 September 2026</strong> · Version 2.2</p>
 
 <div class="tldr">
 <strong>Summary:</strong> DiaLogic stores your records (meal diary, favorites, goals, profile) <strong>only on your own device</strong>. We never send, see or store them on our servers. No account is needed. Only optional online features (online food search, barcode lookup, AI meal analysis) send limited data to the related service, and subscription status is verified with Google Play and RevenueCat. <strong>We do not ask for location permission and we use no ad networks or trackers.</strong>
@@ -111,7 +111,7 @@
 <ul>
   <li><strong>Online food search</strong> — your search text goes to USDA FoodData Central (via our Cloudflare Worker proxy) and Open Food Facts.</li>
   <li><strong>Barcode lookup</strong> — only the barcode number goes to Open Food Facts. Decoding happens on your device; the app requests <strong>no camera permission</strong> and uses the system photo/camera picker.</li>
-  <li><strong>AI meal analysis</strong> — the meal text or the (resized) meal photo is sent through our Cloudflare Worker to Google Gemini, processed on the fly and not stored.</li>
+  <li><strong>AI meal analysis</strong> — the meal text or the (resized) meal photo is sent through our Cloudflare Worker to Google Gemini, not stored on our servers. Google keeps prompts and responses for 55 days solely to detect and prevent abuse and does not use them to improve its products.</li>
 </ul>
 
 <h2>3.1 Subscriptions &amp; purchases (Pro)</h2>
